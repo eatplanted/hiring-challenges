@@ -19,21 +19,27 @@ once you got this running and are still motivated here are a few ideas to spice 
 - make it possible to (regularly) rate an employee in a list of categories (can also be solved as above questionnaire) but show those metrics on the dashboard. the metrics should be planteds values ( see file values.txt )
 - show a fancy effect if its someones birthday
 - show fotos in the circles view and baseball card view ( assume there is an additional field in the csv with an url to a png file)
-- Phone Book make it easy to use on mobile (without the visualization)
+- Phone Book: make it easy to use on mobile to search for someones email/phone number (without the visualization)
 - your idea (if possible we will try to fill it with the real data so it answers all your questions about planted and your future colleagues)
 
 
-# Approach
+# Proposed Approach
 1. choose a suitable stack
 2. create a suitable database schema or ORM models with migrations that work with PostgreSQL
 3. write a quick import script that imports the sample data into the DB ( we will use this to import the real data at the end )
 4. create a cool app
 5. get hired :) 
 
+# Requirements
+- must use postgresql
+- you can use any framework and any language. We prefer Go, Python or Ruby and VueJS. 
+- must contain a docker file that builds the app
+- Docker Container should accept an postgresql URI string as env variable ( 12 factor app)
+- migrations can be run or there is an sql file to create the database and import initial data
 
 # Evaluation Criteria
 
-1. Basic functionality
+1. Basic functionality with Readme that documents the design approach and decisisions
 2. Clean Setup and clean, documented code
 3. Understandable Readme and easy way of building and running the app 
 4. Uncluttered clean and functional design
@@ -42,3 +48,7 @@ once you got this running and are still motivated here are a few ideas to spice 
 # Bonus
 1. automated builds
 2. authentication/permissions system
+
+# Tipps
+
+- KISS: reduce functionality, cut a away features but explain why. 
