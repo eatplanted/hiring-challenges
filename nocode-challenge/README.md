@@ -1,7 +1,11 @@
 # nocode-challenge
 Data model for nocode-challenge.
+The goal of the Challenge is to be able to setup a Database via TypeORM and Build a small UI ontop of it via the nocode tool UIBakery.
 
-Setup typeORM (see https://typeorm.io/#/), appsmith (https://docs.appsmith.com/setup, via docker), postgres.
+Setup typeORM (see https://typeorm.io/#/), uibakery (https://uibakery.io/, via docker), postgres.
+
+
+in order to make your database accessible to uibakery you can either run a postgresql instance on a cloud provider ( AWS, GC or elephantsql ) or you simply expose your local installation via portforwarding tool ( -> https://www.ilovefreesoftware.com/30/featured/free-tools-to-expose-localhost-to-internet.html )
 
 Important: So that your locally running appsmith instance can connect to your local postgres database, you need to allow docker to connect to the database. Do this by modifying the file pg_hba.conf, adding:
 ```
@@ -70,8 +74,8 @@ Now however food products are to be exported to different countries - therefore 
 
 #### UI Part
 
-- Provide a dashboard in appsmith that allows seeing all articles and the information available on each article. (You can use insertArticles as a template to insert more articles). Users need to be able to filter by article internalName, SKU.
+- Provide a dashboard in uibakery that allows seeing all articles and the information available on each article. (You can use insertArticles as a template to insert more articles). Users need to be able to filter by article internalName, SKU.
 
-- Provide a user interface built in appsmith that allows entering new articles (don't worry about article categories or feature types, they already exist). Make sure that if a user enters an article record this record is complete.  You can even validate feature values using the regex expression contained in the feature type definition schema (bonus points). How did you address data integrity and usability?
+- Provide a user interface built in uibakery that allows entering new articles (don't worry about article categories or feature types, they already exist). Make sure that if a user enters an article record this record is complete.  You can even validate feature values using the regex expression contained in the feature type definition schema (bonus points). How did you address data integrity and usability?
 
 - Add the possibility to enter translated features to the UI above (bonus points).
